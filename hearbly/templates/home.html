@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<title>{{title}}</title>
+<div class="home_page">
+    <div class="home_page_info">
+        <h4>Welcome To Herbaly Wellness Collection Data Base System</h4>
+        <h5 class="info_suptitile">Helps you convert complex data sum into graphic and numeric output</h5>
+        <a href="/Sign In"><input type="submit" value="Get Started"></a>
+    </div>
+    <div class="home_page_picture">
+        <img src="{{url_for('static' , filename = 'IMAGES/product.png')}}">
+    </div>
+</div>
+{% endblock content %}

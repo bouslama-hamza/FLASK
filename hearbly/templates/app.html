@@ -1,0 +1,37 @@
+{% extends "base_app.html" %}
+{% block test %}
+<title>{{title}}</title>
+    <div class="app_data">
+        <div class="app_data_title">
+            <h2>Welcome To Hearbly Data System</h2>
+            <h3>We ask you to respect the files mentioned below to get the best results</h3>
+        </div>
+            <div class="app_type">
+                <div class="app_one">
+                    <img src="{{url_for('static' , filename = 'APPLICATION/excel.png')}}">
+                    <h3>Excel Document</h3>
+                </div>
+            </div>
+            <div class="app_type_center">
+                <div class="pulse">
+                    <div class="image-upload">
+                        <form action="/Data Base" method="POST">
+                            <label for="file-input"><img src="{{url_for('static' , filename ='IMAGES/data_base_picture.png')}}"/></label>
+                            <input name="test" id="file-input" type="file" />
+                            <input type="submit" value="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="app_type_two">
+                <div class="app_three">
+                    <img src="{{url_for('static' , filename = 'APPLICATION/google.png')}}">
+                    <h3>Google Cloud</h3>
+                </div>
+                <div class="app_four">
+                    <img src="{{url_for('static' , filename = 'APPLICATION/word.png')}}">
+                    <h3>Word Document</h3>
+                </div>
+            </div>
+        </div>
+{% endblock test %}

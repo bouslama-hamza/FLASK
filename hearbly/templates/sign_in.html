@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<title>{{title}}</title>
+<div class="sign_in_page">
+    <div class="sign_in_input">
+        <div class="sign_in_title">EMPLOYER LOGIN</div>
+        {% if message %}
+        <p style="color: red;">{{message}}</p>
+        {% elif messages %}
+        <p style="color: green;">{{messages}}</p>
+        {% endif %}
+        <form action="/Sign In" method="POST">
+            <input class="email" name="email" type="email" placeholder="Email Address" required><br>
+            <input class="password" name="password" type="password" placeholder="Your Password" required><br>
+            <input class="submit" type="submit" value="Sign In"><br><br><br>
+        </form>
+        <div class="sign_lien">
+            <a href="/Sign Up">Don't Have An Account ?</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

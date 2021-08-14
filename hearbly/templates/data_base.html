@@ -1,0 +1,48 @@
+{% extends "base_app.html" %}
+{% block test %}
+<div class="data_base_page">
+    <div class="data_base_ratio">
+        <div class="data_base_amount">
+            {% if tef %}
+            <h3>Total Amount</h3>
+            <h1>{{tef}}$</h1>
+            {% endif %}
+        </div>
+        <div class="data_base_client">
+            <h3>Client Number</h3>
+            <h1>15214</h1>
+        </div>
+        <div class="data_base_type">
+            <h3>Most Using Type</h3>
+            <h1>U.S.D</h1>
+        </div>
+        <div class="data_base_aproved">
+            <h3>Text Aproved</h3>
+            <h1>85.5%</h1>
+        </div>
+    </div>
+    <div class="data_base_plot">
+        <div class="data_base_plt">
+            <div class="data_base_plt_title">
+                <h3>Client Payment Scheme</h3>
+                <p>A graphe that contient all payment amount from all client </p>
+            </div>
+            <div class="data_base_plat">
+                <img src="{{url_for('static' , filename = 'IMAGES/pip.png')}}">
+            </div>
+        </div>
+        <div class="data_base_pie">
+            <div class="data_base_pie_title">
+                <h3>Client Payment Scheme</h3>
+                <p>A graphe that contient all payment</p>
+            </div>
+            <div class="data_base_piee">
+                <img src="{{url_for('static' , filename = 'IMAGES/pip.png')}}">
+            </div>
+        </div>
+    </div>
+    <div class="data_base_table">
+        <div class="data_base_excel"></div>
+    </div>
+</div>
+{% endblock test %}
