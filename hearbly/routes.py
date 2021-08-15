@@ -4,7 +4,8 @@ from hearbly import app ,db
 from hearbly.models import User ,Register
 from hearbly import send_email
 from hearbly.send_email import send_email
-from hearbly.pandas import request_data_base
+from hearbly.pandas import request_data_base , make_plot
+from hearbly.pyplot import make_pie
 ##########################################################################################
 #route for the home page
 @app.route("/", methods = ['GET','POST'])
@@ -35,7 +36,7 @@ def sign_in():
 def sign_up():
     if request.method == 'POST':
         send_email(request.form.get("make_email"),request.form.get("make_email"),'send')
-        return render_template('sign_in.html' , messages = 'Your Email Has Been Sent successfully')
+        return render_template('sign_in.html' ,title = 'Create Account', messages = 'Your Email Has Been Sent successfully')
     return render_template("sign_up.html" , title = 'Create Account')
 ##########################################################################################
 #route for the application
@@ -49,7 +50,7 @@ def main():
 @app.route("/Log Out" , methods = ['GET','POST'])
 def log_out():
     session.clear()
-    return render_template("sign_in.html")
+    return render_template("sign_in.html" ,title='Sign In')
 ##########################################################################################
 #route for manage account
 @app.route("/Manage Account" , methods = ['GET','POST'])
@@ -81,8 +82,10 @@ def data_base():
     if request.method == 'POST':
         session['make'] = request.form.get("test")
         base = 'hearbly/static/EXCEL/'+session['make']
-        x = request_data_base(base)
-        return render_template("data_base.html" , tef = x , data = info_all)
+        data_base = request_data_base(base)
+        make_plot(base)
+        make_pie(base)
+        return render_template("data_base.html" , data = info_all, data_base = data_base ,title = 'Data Base Result')
     return render_template("app.html" , title = 'Data Base Query', data = info_all)
 ###########################################################################################
 @app.route("/Data base result" , methods = ['GET','POST'])

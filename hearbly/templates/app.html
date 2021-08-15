@@ -15,10 +15,9 @@
             <div class="app_type_center">
                 <div class="pulse">
                     <div class="image-upload">
-                        <form action="/Data Base" method="POST">
+                        <form name="submit" action="/Data Base" method="POST">
                             <label for="file-input"><img src="{{url_for('static' , filename ='IMAGES/data_base_picture.png')}}"/></label>
-                            <input name="test" id="file-input" type="file" />
-                            <input type="submit" value="submit">
+                            <input oninput="submit()" name="test" id="file-input" type="file" style="visibility: hidden; position: absolute;">
                         </form>
                     </div>
                 </div>

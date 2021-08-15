@@ -10,7 +10,7 @@
 }
 .app_main{
     border: 1px solid black;
-    height: 800px;
+    height: 100%;
     width: 20%;
     background-color: rgb(16, 24, 64);
     position: fixed;
@@ -351,9 +351,6 @@ h2{
         opacity: 0;
     }
 }
-.image-upload>input {
-    display: none;
-}
 .app_type,
 .app_type_center,
 .app_type_two{
@@ -390,4 +387,7 @@ h2{
 .app_three:hover{
     background-color: rgb(193, 196, 214);
     transition: all 0.3s linear;
+}
+.image-upload input[type = submit]{
+    margin-top: 100%;
 }

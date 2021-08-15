@@ -27,16 +27,24 @@
     border-radius: 12px;
     border: none;
     box-shadow: 5px 5px 5px #949497;
+    opacity: 1;
+    transition: all 0.5s linear;
 }
 .data_base_amount h1,
 .data_base_client h1,
 .data_base_type h1,
 .data_base_aproved h1{
     text-align: center;
-    margin-top: 5%;
+    margin-top: 2.5%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 43px;
     color: green;
+    margin-bottom: 3%;
+}
+.data_base_aproved.active{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s linear;
 }
 .data_base_amount h3,
 .data_base_client h3,
@@ -45,8 +53,8 @@
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(16, 24, 64);
     font-size: 17px;
-    margin: 0;
-    margin-top: 8%;
+    margin: 4%;
+    margin-top: 6%;
     margin-left: 7%;
 }
 .data_base_plot{
@@ -74,6 +82,13 @@
     border-radius: 12px;
     border: none;
     box-shadow: 5px 5px 5px #949497;
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.data_base_pie.active{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s linear;
 }
 .data_base_table{
     border: 1px solid black;
@@ -114,19 +129,25 @@
     font-size: 16px;
     font-family:sans-serif;
 }
+p{
+    color: rgb(66, 71, 94);
+    font-size: 14px;
+    font-family:sans-serif;
+    text-align: center;
+}
 .data_base_plat,
 .data_base_piee{
     border: 1px solid black;
     height: 75%;
-    margin-top: 5px;
     display: flex;
     align-items: center;
     border: none;
-    margin-left: 20px;
 }
-.data_base_plat img,
 .data_base_piee img{
-    height: 330px;
-    width: 90%;
-    height: 95%;
+    width: 400px;
+    height: 400px;
+}
+.data_base_plat img{
+    width: 900px;
+    height: 400px;
 }

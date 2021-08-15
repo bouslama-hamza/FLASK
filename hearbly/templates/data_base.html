@@ -1,24 +1,28 @@
 {% extends "base_app.html" %}
 {% block test %}
+<title>{{title}}</title>
 <div class="data_base_page">
     <div class="data_base_ratio">
         <div class="data_base_amount">
-            {% if tef %}
+        {% if data_base %}
             <h3>Total Amount</h3>
-            <h1>{{tef}}$</h1>
-            {% endif %}
+            <h1>{{data_base.amount}} $</h1>
+            <p>Value Of Total Amount</p>
         </div>
         <div class="data_base_client">
             <h3>Client Number</h3>
-            <h1>15214</h1>
+            <h1>{{data_base.client}} C</h1>
+            <p>Total Client Number</p>
         </div>
         <div class="data_base_type">
-            <h3>Most Using Type</h3>
-            <h1>U.S.D</h1>
+            <h3>herblyUSD Using times</h3>
+            <h1>{{data_base.herblyUSD}} USD</h1>
+            <p>Total USD Using Times</p>
         </div>
         <div class="data_base_aproved">
-            <h3>Text Aproved</h3>
-            <h1>85.5%</h1>
+            <h3>herblyCAD Using times</h3>
+            <h1>{{data_base.herblyCAD}} CAD</h1>
+            <p>Total CAD Using Times</p>
         </div>
     </div>
     <div class="data_base_plot">
@@ -28,16 +32,17 @@
                 <p>A graphe that contient all payment amount from all client </p>
             </div>
             <div class="data_base_plat">
-                <img src="{{url_for('static' , filename = 'IMAGES/pip.png')}}">
+                <img src="../static/PYPLOT/plot.png">
             </div>
         </div>
+        {% endif %}
         <div class="data_base_pie">
             <div class="data_base_pie_title">
-                <h3>Client Payment Scheme</h3>
-                <p>A graphe that contient all payment</p>
+                <h3>Payment Type</h3>
+                <p>A graphe that contient the payment Type</p>
             </div>
             <div class="data_base_piee">
-                <img src="{{url_for('static' , filename = 'IMAGES/pip.png')}}">
+                <img src="../static/PIEPLOT/pie.png">
             </div>
         </div>
     </div>
