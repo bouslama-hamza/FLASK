@@ -15,8 +15,7 @@
             <div class="app_modification" id="app_modification">
                 <a href="/Data Base">Data Base Query</a>
                 <a href="/Manage Account">Manage Account</a>
-                <a href="#">Activite Account</a>
-                <a href="#">Load Older Data</a>
+                <a href="/Active account">Activite Account</a>
             </div>
             <a class="app_privacy" href="#"><img src="{{url_for('static' , filename = 'ICONS/shield-with-lock.png')}}"><h2>Privacy</h2></a>
             <a class="app_notificat" href="#"><img src="{{url_for('static' , filename = 'ICONS/notification.png')}}"><h2>Notification</h2></a>
@@ -42,7 +41,7 @@
                                 {% endif %}
                             </div>
                             <ul>
-                                <z><a href="#"><img src="{{url_for('static' ,filename = 'ICONS/edit.png')}}">Edit Profile</a><br></z> 
+                                <z><a href="/Active account"><img src="{{url_for('static' ,filename = 'ICONS/edit.png')}}">Edit Profile</a><br></z> 
                                 <z><a href="#"><img src="{{url_for('static' ,filename = 'ICONS/settings.png')}}">Settings</a><br></z> 
                                 <z><a href="/Log Out"><img src="{{url_for('static' ,filename = 'ICONS/log-out.png')}}">Log Out</a><br></z>
                             </ul>

@@ -6,6 +6,9 @@
             <h2>Welcome To Hearbly Data System</h2>
             <h3>We ask you to respect the files mentioned below to get the best results</h3>
         </div>
+        {% if message %}
+        <p style="color:red;">{{message}}</p>
+        {% endif %}
             <div class="app_type">
                 <div class="app_one">
                     <img src="{{url_for('static' , filename = 'APPLICATION/excel.png')}}">

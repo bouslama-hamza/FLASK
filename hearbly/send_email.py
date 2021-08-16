@@ -1,7 +1,5 @@
-from flask import request , redirect ,url_for ,render_template,session
-from hearbly import app
 import smtplib
-from hearbly import routes
+import random
 #generale function for sending email
 def send_email(email,password,type):
     EMAIL_ADDRESS = 'test.send53@gmail.com'
@@ -21,3 +19,10 @@ def send_email(email,password,type):
             body = 'You Are New Able To Acess To Hearbly Data Base System ,Use The Folowing Information To Acces : \nEmail : '+email+'\nPassword : '+password 
             msg = f'Subject : {subject} \n\n {body}'
             smtp.sendmail(EMAIL_ADDRESS , EMAIL_ADDRESS ,msg)
+        elif type == 'change':
+            n = random.randint(11111111,99999999)
+            subject = 'Request To change Password'
+            body = 'Your request to change your password has been added successfuly please use the following code to access : \n'+str(n)
+            msg = f'Subject : {subject} \n\n {body}'
+            smtp.sendmail(EMAIL_ADDRESS , EMAIL_ADDRESS ,msg)
+            return n

@@ -1,6 +1,5 @@
 from enum import unique
 from hearbly import db
-from hearbly import app
 #create a class for the user
 class User(db.Model):
     id = db.Column(db.Integer, primary_key = True)
