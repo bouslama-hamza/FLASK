@@ -2,6 +2,9 @@
 {% block content %}
 <title>{{title}}</title>
 <div class="sign_in_page">
+    <div class="sign_in_picture">
+        <img src="{{url_for('static' , filename = 'IMAGES/employer.png')}}">
+    </div>
     <div class="sign_in_input">
         <div class="sign_in_title">EMPLOYER LOGIN</div>
         {% if message %}

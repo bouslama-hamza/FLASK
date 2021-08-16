@@ -6,14 +6,25 @@
     border: 1px solid black;
     height: 600px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     border: none;
 }
+.sign_in_picture{
+    border: 1px solid black;
+    height: 500px;
+    width: 40%;
+    text-align: center;
+    border: none;
+}
+.sign_in_picture img{
+    height: 500px;
+    width: 450px;
+}
 .sign_in_input{
     border: 1px solid black;
-    height: 400px;
-    width: 80%;
+    height: 500px;
+    width: 40%;
     text-align: center;
     border: none;
 }
@@ -26,7 +37,7 @@
     margin-bottom: 50px;
 }
 .email,.password{
-    padding: 16px 150px 16px 150px;
+    padding: 16px 110px 16px 110px;
     margin: 15px 5px;
     font-size: 20px;
     border-radius: 5px;
@@ -42,9 +53,9 @@ a{
 }
 .sign_lien{
     border: 1px solid;
-    width: 40%;
+    width: 80%;
     text-align: center;
-    margin-left: 30%;
+    margin-left: 10%;
     font-size: 18px;
     display: flex;
     justify-content: space-between;
