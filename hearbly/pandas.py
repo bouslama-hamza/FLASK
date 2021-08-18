@@ -11,8 +11,8 @@ def request_data_base(base):
 
 def make_plot(base):
     import pandas as pd
-    import matplotlib.pyplot as plt
+    import matplotlib.pyplot as plt 
     db = pd.read_excel(base)
     db['amount'].plot.area(color ='#44AA99', figsize=(9, 6))
-    plt.savefig("/home/hamza/Desktop/First_year/Firstyear_project/hearbly/static/PYPLOT/plot.png" , transparent=True)
+    plt.savefig("hearbly/static/PYPLOT/plot.png" , transparent=True)
     plt.figure()

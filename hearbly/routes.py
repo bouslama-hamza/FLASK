@@ -24,10 +24,10 @@ def sign_in():
         if info :
             if not info.email == session['email']:
                 message = 'Invalid !! Please Check Your Information and Try again'
-                return render_template("sign_in.html" , message = message)
+                return render_template("sign_in.html" , message = message , title = "Account")
             if not info.password == session['password']:
                 message = 'Invalid !! Please Check Your Information and Try again'
-                return render_template("sign_in.html" , message = message)
+                return render_template("sign_in.html" , message = message , title = "Account")
             info_all = Register.query.filter_by(email = session['email']).first()
             return render_template("app.html" ,title = 'Hearbly Data Base' , data = info_all)
     return render_template("sign_in.html" , title = "Account")
@@ -85,7 +85,7 @@ def change_password():
 def main():
     if request.method == 'POST':
         return render_template("app.html", title = 'Hearbly Data Base')
-    return render_template("sign_in.html")
+    return render_template("sign_in.html" , title = "Account")
 
 #route for log out
 @app.route("/Log Out" , methods = ['GET','POST'])
@@ -117,7 +117,7 @@ def account_manage():
         db.session.commit()
         alert = 'Your Request Has Been added Secssefuly'
         send_email(session['email'],session['password'],'request')
-        return render_template("manage_account.html" , alert = alert )
+        return render_template("manage_account.html" , alert = alert  , title = 'Manage Accounts')
     return render_template("manage_account.html" , title = 'Manage Accounts', data = info_all)
 
 #route for modifier account

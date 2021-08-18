@@ -86,6 +86,7 @@
     box-shadow: 5px 5px 5px #949497;
     opacity: 1;
     transition: all 0.5s linear;
+    visibility: visible;
 }
 .data_base_pie.active{
     visibility: hidden;
