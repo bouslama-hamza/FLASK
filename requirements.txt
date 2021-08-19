@@ -12,6 +12,7 @@ bleach==3.3.0
 blinker==1.4
 Bootstrap-Flask==1.2.0
 Brlapi==0.7.0
+cachetools==4.2.2
 certifi==2019.11.28
 cffi==1.13.2
 chardet==3.0.4
@@ -50,7 +51,17 @@ Flask-Session==0.3.1
 Flask-SQLAlchemy==2.4.4
 Flask-WTF==0.14.3
 future==0.18.2
+google-api-core==2.0.0
+google-auth==2.0.0
+google-auth-oauthlib==0.4.5
+google-cloud-bigquery==2.24.0
+google-cloud-bigquery-storage==2.6.3
+google-cloud-core==2.0.0
+google-crc32c==1.1.2
+google-resumable-media==1.3.3
+googleapis-common-protos==1.53.0
 greenlet==1.1.0
+grpcio==1.39.0
 gunicorn==19.9.0
 html5lib==1.0.1
 httplib2==0.14.0
@@ -77,6 +88,7 @@ language-selector==0.1
 launchpadlib==1.10.13
 lazr.restfulclient==0.14.2
 lazr.uri==1.0.3
+libcst==0.3.20
 libgravatar==0.2.3
 lockfile==0.12.2
 louis==3.12.0
@@ -88,6 +100,7 @@ matplotlib==3.4.2
 matplotlib-inline==0.1.2
 mistune==0.8.4
 monotonic==1.5
+mypy-extensions==0.4.3
 nbclient==0.5.3
 nbconvert==6.0.7
 nbformat==5.1.3
@@ -100,6 +113,7 @@ olefile==0.46
 openpyxl==3.0.7
 packaging==20.9
 pandas==1.2.4
+pandas-gbq==0.15.0
 pandocfilters==1.4.3
 paramiko==2.6.0
 parso==0.8.2
@@ -110,12 +124,17 @@ Pillow==7.0.0
 pluggy==0.13.1
 prometheus-client==0.10.1
 prompt-toolkit==3.0.18
-protobuf==3.6.1
+proto-plus==1.19.0
+protobuf==3.17.3
 ptyprocess==0.7.0
+pyarrow==5.0.0
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
 pycairo==1.16.2
 pycparser==2.19
 pycryptodomex==3.9.4
 pycups==1.9.73
+pydata-google-auth==1.2.0
 pyglet==1.5.18
 Pygments==2.9.0
 PyGObject==3.36.0
@@ -145,7 +164,9 @@ QtPy==1.9.0
 redis==3.4.1
 reportlab==3.5.34
 requests==2.22.0
+requests-oauthlib==1.3.0
 requests-unixsocket==0.2.0
+rsa==4.7.2
 SecretStorage==2.3.1
 Send2Trash==1.5.0
 setproctitle==1.1.10
@@ -159,6 +180,8 @@ testpath==0.4.4
 text-unidecode==1.3
 tornado==6.1
 traitlets==5.0.5
+typing-extensions==3.10.0.0
+typing-inspect==0.7.1
 ubuntu-advantage-tools==27.2
 ubuntu-drivers-common==0.0.0
 ufw==0.36
