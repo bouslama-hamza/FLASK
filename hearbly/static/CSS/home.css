@@ -54,3 +54,14 @@ input[type = submit]:hover{
     background-color: #06AF6E;
     transition: all 0.5s linear;
 }
+.email_class{
+    border: none;
+    outline: none;
+    padding: 15px 120px 15px 120px;
+    border-radius: 4px;
+    font-size: 25px;
+    text-align: center;
+    background-color: #ffffff;
+    color: rgb(226, 116, 26);
+    transition: all 0.5s linear;
+}

@@ -409,6 +409,7 @@ h2{
 .urlme{
     padding: 16px 150px 16px 150px;
     border: none;
+    outline: #949497;
     box-shadow: 5px 5px 4px #949497;
     height: 40%;
     transition: all 0.5s linear;
