@@ -130,10 +130,10 @@ p{
     border: none;
 }
 .data_base_piee img{
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height:100%;
 }
 .data_base_plat img{
-    width: 900px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
 }

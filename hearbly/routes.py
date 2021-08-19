@@ -5,9 +5,8 @@ from hearbly import app ,db
 from hearbly.models import User ,Register
 from hearbly import send_email
 from hearbly.send_email import send_email
-from hearbly.pandas import request_data_base , make_plot
-from hearbly.pyplot import make_pie
-
+from hearbly.pandas import request_data_base 
+from hearbly.pyplot import  make_plot , make_pie
 #route for the home page
 @app.route("/", methods = ['GET','POST'])
 def index():
@@ -146,11 +145,22 @@ def data_base():
     if request.method == 'POST':
         session['make'] = request.form.get("test")
         base = 'hearbly/static/EXCEL/'+session['make']
-        data_base = request_data_base(base)
-        make_plot(base)
-        make_pie(base)
+        data_base = request_data_base(base, 'Excel')
+        make_plot(base,'Excel')
+        make_pie(base ,'Excel')
         return render_template("data_base.html" , data = info_all, data_base = data_base ,title = 'Data Base Result')
     return render_template("app.html" , title = 'Data Base Query', data = info_all)
+
+#route for database with big query
+@app.route("/Data Base Bigquery" , methods = ['GET','POST'])
+def google_cloud():
+    if request.method == 'POST':
+        session['big_query'] = request.form.get("big_query")
+        data_base = request_data_base(session['big_query'],'Query')
+        make_plot(session['big_query'],'Query')
+        make_pie(session['big_query'] ,'Query')
+        return render_template("data_base.html" , data = info_all, data_base = data_base ,title = 'Data Base Result')
+    return render_template("google_cloud_data_base.html" , title = "Data Base Query" , data = info_all)
 
 #route for data base result
 @app.route("/Data base result" , methods = ['GET','POST'])

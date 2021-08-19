@@ -11,8 +11,10 @@
         {% endif %}
             <div class="app_type">
                 <div class="app_one">
-                    <img src="{{url_for('static' , filename = 'APPLICATION/excel.png')}}">
-                    <h3>Excel Document</h3>
+                    <a href="/Data Base">
+                        <img src="{{url_for('static' , filename = 'APPLICATION/excel.png')}}">
+                        <h3>Excel Document</h3>
+                    </a>
                 </div>
             </div>
             <div class="app_type_center">
@@ -27,12 +29,16 @@
             </div>
             <div class="app_type_two">
                 <div class="app_three">
-                    <img src="{{url_for('static' , filename = 'APPLICATION/google.png')}}">
-                    <h3>Google Cloud</h3>
+                    <a href="/Data Base Bigquery">
+                        <img src="{{url_for('static' , filename = 'APPLICATION/google.png')}}">
+                        <h3>Google Cloud</h3>
+                    </a>
                 </div>
                 <div class="app_four">
-                    <img src="{{url_for('static' , filename = 'APPLICATION/word.png')}}">
-                    <h3>Word Document</h3>
+                    <a href="#">
+                        <img src="{{url_for('static' , filename = 'APPLICATION/word.png')}}">
+                        <h3>Word Document</h3>
+                    </a>
                 </div>
             </div>
         </div>

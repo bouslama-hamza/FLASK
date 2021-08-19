@@ -13,3 +13,9 @@ function menu(){
 function submit(){ 
     document.submit.submit()
 }
+function show_me(){
+    const urlme = document.querySelector(".urlme")
+    const pusle = document.querySelector(".pulse_google_cloud")
+    urlme.classList.toggle('show')
+    pusle.classList.toggle('show')
+}

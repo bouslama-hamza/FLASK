@@ -351,6 +351,52 @@ h2{
         opacity: 0;
     }
 }
+.pulse_google_cloud{
+    height: 150px;
+    width: 150px;
+    background: linear-gradient(
+        #c53939,
+        #f77c4c
+    );
+    position: absolute;
+    margin: auto;
+    left: 260px;
+    right: 0;
+    top: 180px;
+    bottom: 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 50px;
+    color: #ffffff;
+}
+.pulse_google_cloud:before,
+.pulse_google_cloud:after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #c41c1c;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.7;
+}
+.pulse_google_cloud:before{
+    animation: pulse 2s ease-out infinite;
+}
+.pulse_google_cloud:after{
+    animation: pulse 2s 1s ease-out infinite;
+}
+@keyframes pulse{
+    100%{
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+.pulse_google_cloud.show{
+    visibility: hidden;
+    opacity: 0;
+}
 .app_type,
 .app_type_center,
 .app_type_two{
@@ -359,6 +405,21 @@ h2{
     display: flex;
     justify-content: center;
     border: none;
+}
+.urlme{
+    padding: 16px 150px 16px 150px;
+    border: none;
+    box-shadow: 5px 5px 4px #949497;
+    height: 40%;
+    transition: all 0.5s linear;
+    margin-top: 3%;
+    visibility: hidden;
+    opacity: 0;
+}
+.urlme.show{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s linear;
 }
 .app_one,
 .app_three,
@@ -377,15 +438,15 @@ h2{
     transition: all 0.3s linear;
 }
 .app_one:hover{
-    background-color: rgb(193, 196, 214);
+    background-color: rgb(18, 155, 13);
     transition: all 0.3s linear;
 }
 .app_four:hover{
-    background-color: rgb(193, 196, 214);
+    background-color: rgb(13, 86, 170);
     transition: all 0.3s linear;
 }
 .app_three:hover{
-    background-color: rgb(193, 196, 214);
+    background-color:rgb(212, 39, 39);
     transition: all 0.3s linear;
 }
 .image-upload input[type = submit]{
