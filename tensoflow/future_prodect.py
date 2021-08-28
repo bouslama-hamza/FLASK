@@ -3,7 +3,7 @@ from pandas.io import gbq
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
-import keras
+from tensoflow import keras
 from keras.models import Sequential
 from keras.layers import LSTM
 from keras.layers import Dense
@@ -52,7 +52,7 @@ class future_ratio:
     self.model.compile(optimizer='adam',
                   loss = 'mean_squared_error',
                   metrics = ['accuracy'])
-    self.model.fit(X_train , Y_train , validation_data = (X_test , Y_test) , epochs = 5)
+    self.model.fit(X_train , Y_train , validation_data = (X_test , Y_test) , epochs = 100)
     train_product = self.model.predict(X_train)
     test_product  = self.model.predict(X_test)
     train_product = self.scaler.inverse_transform(train_product)
